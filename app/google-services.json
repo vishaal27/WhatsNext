@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "136784245739",
+    "firebase_url": "https://whatsnext-67046.firebaseio.com",
+    "project_id": "whatsnext-67046",
+    "storage_bucket": "whatsnext-67046.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136784245739:android:1fde064def084acb",
+        "android_client_info": {
+          "package_name": "com.example.android.whatsnext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136784245739-d7lf6nv4rl4ntoojr5betmg0qlud0gn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.whatsnext",
+            "certificate_hash": "4cbc8f5252832c3b113ef59c97bcf3f40e4a6f4b"
+          }
+        },
+        {
+          "client_id": "136784245739-77o0f5e7acdovhej68klpom4lo9n9qho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgIREe9s4eRqo1oKCuEqbpXKT_jj4_t-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136784245739-77o0f5e7acdovhej68klpom4lo9n9qho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
