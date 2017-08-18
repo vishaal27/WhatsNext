@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill in what normal week is like "
+        android:fontFamily="serif"
+        android:textSize="11pt"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <Button
+        android:id="@+id/buttonMonday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonTuesday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:fontFamily="serif"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonWednesday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonThursday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonFriday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonSaturday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saturday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+    <Button
+        android:id="@+id/buttonSunday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunday"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="19sp"
+         />
+
+</LinearLayout>

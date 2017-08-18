@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.Lis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFirebaseAuth=FirebaseAuth.getInstance();
-        mUsername = ANONYMOUS;
+//        mFirebaseAuth=FirebaseAuth.getInstance();
+//        mUsername = ANONYMOUS;
         //addButtonCreatedEvents=(Button) findViewById(R.id.button_add);
 
         mBaseTimetableList = (RecyclerView) findViewById(R.id.base_timeline);
@@ -60,23 +60,23 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.Lis
         mCreatedEventsList.setAdapter(mAdapter1);
 
 
-        mAuthStateListener= new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user= firebaseAuth.getCurrentUser();
-                if(user!=null)
-                {
-                    //Toast.makeText(getApplicationContext(), "Welcome to FriendlyChat!", Toast.LENGTH_SHORT).show();
-                    mUsername=user.getDisplayName();
-                    //setDatabaseReadListener();
-                }
-                else
-                {
-
-                    Log.d("TAG", "Logged out");
-                }
-            }
-        };
+//        mAuthStateListener= new FirebaseAuth.AuthStateListener() {
+//            @Override
+//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                FirebaseUser user= firebaseAuth.getCurrentUser();
+//                if(user!=null)
+//                {
+//                    //Toast.makeText(getApplicationContext(), "Welcome to FriendlyChat!", Toast.LENGTH_SHORT).show();
+//                    mUsername=user.getDisplayName();
+//                    //setDatabaseReadListener();
+//                }
+//                else
+//                {
+//
+//                    Log.d("TAG", "Logged out");
+//                }
+//            }
+//        };
 
 
 
@@ -89,14 +89,14 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.Lis
     @Override
     protected void onStart() {
         super.onStart();
-        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+        //mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        if(mAuthStateListener!=null)
-            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+//        if(mAuthStateListener!=null)
+//            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
     }
 
     @Override
