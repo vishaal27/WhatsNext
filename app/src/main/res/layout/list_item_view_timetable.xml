@@ -34,7 +34,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:fontFamily="monospace"
-                android:text="TIME"
+                android:text="*10 am - 10 pm*"
                 android:textColor="@android:color/black"
                 android:textSize="25sp" />
 
@@ -51,7 +51,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="EVENT"
+                android:text="*BYLD HACKATHON*"
                 android:textColor="#02141C"
                 android:textSize="30sp" />
 

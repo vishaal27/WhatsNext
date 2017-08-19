@@ -26,6 +26,7 @@ public class ViewTimetableActivity extends AppCompatActivity implements ViewTime
 
         mBaseTimetableList.setHasFixedSize(true);
         mAdapter=new ViewTimetableCustomAdapter(MainActivity.mondayBaseItems.size()+MainActivity.tuesdayBaseItems.size()+MainActivity.wednesdayBaseItems.size()+MainActivity.thursdayBaseItems.size()+MainActivity.fridayBaseItems.size()+MainActivity.saturdayBaseItems.size()+MainActivity.sundayBaseItems.size(), this);
+        //mAdapter= new ViewTimetableCustomAdapter(7, this);
         mBaseTimetableList.setAdapter(mAdapter);
 
     }

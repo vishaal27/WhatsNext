@@ -48,7 +48,7 @@ public class ViewTimetableCustomAdapter extends RecyclerView.Adapter<ViewTimetab
     @Override
     public NumberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context=parent.getContext();
-        int layoutIdForListItem=R.layout.list_item_base_timeline;
+        int layoutIdForListItem=R.layout.list_item_view_timetable;
         LayoutInflater inflater=LayoutInflater.from(context);
         View view=inflater.inflate(layoutIdForListItem,parent,false);
         NumberViewHolder viewHolder=new NumberViewHolder(view);
@@ -114,7 +114,7 @@ public class ViewTimetableCustomAdapter extends RecyclerView.Adapter<ViewTimetab
             Log.d("TAG", x.eventName+" "+x.timeTo);
 
         holder.bind(items.get(position).eventName, items.get(position).timeFrom, items.get(position).timeTo);
-
+//holder.bind("1", "2", "3");
 
     }
 
@@ -145,11 +145,17 @@ public class ViewTimetableCustomAdapter extends RecyclerView.Adapter<ViewTimetab
             //DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
             //Calendar calobj = Calendar.getInstance();
 
-            //if(displayTime!=null)
+            if(displayTime!=null)
                 displayTime.setText(timeFrom+"-"+timeTo);
-            //if(displayString!=null)
+            if(displayString!=null)
                 displayString.setText(textForView);
             //displayTime.setText(df.format(calobj.getTime()));
+
+//            displayString.setText("1");
+//            displayTime.setText("2");
+
+//            displayTime.setText(textForView);
+//            displayString.setText(timeFrom);
         }
 
         @Override

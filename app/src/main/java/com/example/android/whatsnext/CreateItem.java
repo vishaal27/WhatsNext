@@ -9,8 +9,9 @@ public class CreateItem
     String timeFrom;
     String timeTo;
     String eventName;
+    String date;
 
-    public CreateItem(String timeFrom,String timeTo, String eventName){
-        this.timeFrom=timeFrom;this.timeTo=timeTo;this.eventName=eventName;
+    public CreateItem(String timeFrom,String timeTo, String eventName, String date){
+        this.timeFrom=timeFrom;this.timeTo=timeTo;this.eventName=eventName;this.date=date;
     }
 }

@@ -62,7 +62,7 @@ public class CreatedEventsCustomAdapter extends RecyclerView.Adapter<CreatedEven
         DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
         Calendar calobj = Calendar.getInstance();
         //System.out.println(df.format(calobj.getTime()));
-        holder.bind(df.format(calobj.getTime()) , position+"");
+        holder.bind(MainActivity.createItemList.get(position).timeFrom, MainActivity.createItemList.get(position).timeTo, MainActivity.createItemList.get(position).date,MainActivity.createItemList.get(position).eventName );
     }
 
     @Override
@@ -93,10 +93,10 @@ public class CreatedEventsCustomAdapter extends RecyclerView.Adapter<CreatedEven
             itemView.setOnClickListener(this);
         }
 
-        void bind(String question, String answer)
+        void bind(String timeFrom, String timeTo, String Date, String eventName)
         {
-            displayTime.setText(question);
-            displayEvent.setText("Event number: "+answer);
+            displayTime.setText(timeFrom+"-"+timeTo+"-"+Date);
+            displayEvent.setText(eventName);
             //displayEvent.setText("11");
         }
 
