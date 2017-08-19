@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/eventName"
-            android:textColorHint="@color/black"
+
             android:textColor="@color/black"
             android:hint="Event name"/>
 
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timeFrom"
-            android:textColorHint="@color/black"
+
             android:textColor="@color/black"
             android:hint="Start time"/>
 
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timeTo"
-            android:textColorHint="@color/black"
+
             android:textColor="@color/black"
             android:hint="End time"/>
     </LinearLayout>
@@ -98,25 +98,43 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
         android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_alignParentStart="true"
+
+            android:background="@android:color/white">
         <Button
             android:id="@+id/buttonDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/diesel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:text="Done"
+             />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="32dp"
-            android:layout_marginEnd="32dp" />
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginStart="32dp"
-            android:background="@color/diesel"
-            android:text="Add"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_marginEnd="32dp"
+
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="Add Event" />
+        </FrameLayout>
     </RelativeLayout>
 </LinearLayout>

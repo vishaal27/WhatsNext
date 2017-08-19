@@ -84,7 +84,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.NumberView
         int backgroundColor;
         int differenceInShade = 50;
         Log.d(TAG,"#"+position);
-        holder.bind(String.valueOf(position+1));
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+
+        switch (day)
+        {
+            case Calendar.MONDAY: holder.bind(MainActivity.mondayBaseItems.get(position).eventName, MainActivity.mondayBaseItems.get(position).timeFrom, MainActivity.mondayBaseItems.get(position).timeTo);break;
+
+            case Calendar.TUESDAY:  holder.bind(MainActivity.tuesdayBaseItems.get(position).eventName, MainActivity.tuesdayBaseItems.get(position).timeFrom, MainActivity.tuesdayBaseItems.get(position).timeTo);break;
+
+            case Calendar.WEDNESDAY:  holder.bind(MainActivity.wednesdayBaseItems.get(position).eventName, MainActivity.wednesdayBaseItems.get(position).timeFrom, MainActivity.wednesdayBaseItems.get(position).timeTo);break;
+
+            case Calendar.THURSDAY:  holder.bind(MainActivity.thursdayBaseItems.get(position).eventName, MainActivity.thursdayBaseItems.get(position).timeFrom, MainActivity.thursdayBaseItems.get(position).timeTo);break;
+
+            case Calendar.FRIDAY:  holder.bind(MainActivity.fridayBaseItems.get(position).eventName, MainActivity.fridayBaseItems.get(position).timeFrom, MainActivity.fridayBaseItems.get(position).timeTo);break;
+
+            case Calendar.SATURDAY:  holder.bind(MainActivity.saturdayBaseItems.get(position).eventName, MainActivity.saturdayBaseItems.get(position).timeFrom, MainActivity.saturdayBaseItems.get(position).timeTo);break;
+
+            case Calendar.SUNDAY:  holder.bind(MainActivity.sundayBaseItems.get(position).eventName, MainActivity.sundayBaseItems.get(position).timeFrom, MainActivity.sundayBaseItems.get(position).timeTo);break;
+        }
 //        TextView im=(TextView) holder.itemView.findViewById(R.id.right_button);
 
 
@@ -273,12 +292,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.NumberView
             itemView.setOnClickListener(this);
         }
 
-        void bind(String textForView)
+        void bind(String textForView, String timeFrom, String timeTo)
         {
-            DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-            Calendar calobj = Calendar.getInstance();
+            //DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+            //Calendar calobj = Calendar.getInstance();
+            displayTime.setText(timeFrom+"-"+timeTo);
             displayString.setText(textForView);
-            displayTime.setText(df.format(calobj.getTime()));
+            //displayTime.setText(df.format(calobj.getTime()));
         }
 
         @Override

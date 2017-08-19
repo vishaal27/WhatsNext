@@ -6,11 +6,13 @@ package com.example.android.whatsnext;
 
 public class BaseItem {
 
-    String time;
+    String timeFrom;
+    String timeTo;
     String eventName;
 
-    public BaseItem(String time, String eventName){
-        this.time=time;
+    public BaseItem(String timeFrom,String timeTo, String eventName){
+        this.timeFrom=timeFrom;
+        this.timeTo=timeTo;
         this.eventName=eventName;
     }
 

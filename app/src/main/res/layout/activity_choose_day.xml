@@ -102,4 +102,22 @@
         android:textSize="19sp"
          />
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/diesel">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createTimeTable"
+        android:layout_gravity="center"
+        android:fontFamily="casual"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:text="Create your timetable"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
 </LinearLayout>

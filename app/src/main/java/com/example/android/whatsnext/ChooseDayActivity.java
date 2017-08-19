@@ -18,13 +18,14 @@ public class ChooseDayActivity extends AppCompatActivity {
     private Button fridayButton;
     private Button saturdayButton;
     private Button sundayButton;
+    private Button buttonShowCreateTimetable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_choose_day);
 
-
+        getSupportActionBar().hide();
         final SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         if(sharedPreferences.getBoolean("FIRST_TIME",true))
         {
@@ -36,6 +37,18 @@ public class ChooseDayActivity extends AppCompatActivity {
             fridayButton=(Button) findViewById(R.id.buttonFriday);
             saturdayButton=(Button) findViewById(R.id.buttonSaturday);
             sundayButton=(Button) findViewById(R.id.buttonSunday);
+
+            buttonShowCreateTimetable=(Button) findViewById(R.id.createTimeTable);
+
+            buttonShowCreateTimetable.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    sharedPreferences.edit().putBoolean("FIRST_TIME", false).apply();
+                    Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
 
             mondayButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -100,7 +113,7 @@ public class ChooseDayActivity extends AppCompatActivity {
                 }
             });
 
-            sharedPreferences.edit().putBoolean("FIRST_TIME", false).apply();
+
         }
         else
         {
