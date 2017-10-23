@@ -1,3 +1,3 @@
 # WhatsNext
 
-The new Google Calendar.
+The (new) Google Calendar.
